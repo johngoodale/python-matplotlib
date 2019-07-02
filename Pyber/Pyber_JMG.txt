@@ -1,4 +1,4 @@
-Jupyter Notebook
+﻿Jupyter Notebook
 Pyber_JMG
 Last Checkpoint: a few seconds ago
 (autosaved)
@@ -123,15 +123,12 @@ for handle in lgnd.legendHandles:
 plt.text(44,36, "Note: \nCircle size correlates with driver count per city.", fontsize=11)
 ​
 # Save Figure
-plt.savefig("Pyber Ride Sharing Data_2016.jpeg")
+plt.savefig("Pyber Ride Sharing Data_2016.jpeg", bbox_inches = 'tight')
 ​
 # Show plot
 plt.show()
 
 Total Fares by City Type
-city_groups = combined_data_df.groupby('type')
-total_fares = city_groups['fare'].sum()
-total_fares.head()
 # Calculate Type Percents
 city_groups = combined_data_df.groupby('type')
 total_fares = city_groups['fare'].sum()
@@ -142,6 +139,7 @@ Rural        4327.93
 Suburban    19356.33
 Urban       39854.38
 Name: fare, dtype: float64
+## Note I couldn't match the exact angle of the pir chart but spoke with Max and said that wouldn't be an issue.
 # Build Pie Chart
 ## labels of the city type
 labels = ["Rural", "Suburban", "Urban"]
@@ -165,18 +163,11 @@ plt.axis("equal")
 plt.savefig("Pct Total Fares by City Type.jpeg")
 ​
 # Show Figure
+## Note I couldn't match the exact angle of the pir chart but spoke with Max and said that wouldn't be an issue.
 plt.show()
 ​
 
-# Show Figure
-plt.show()
-# Show Figure
-plt.show()
-
 Total Rides by City Type
-# Calculate Ride Percents
-total_rides = city_groups['ride_id'].count()
-total_rides.head()
 # Calculate Ride Percents
 total_rides = city_groups['ride_id'].count()
 total_rides.head()
@@ -208,14 +199,11 @@ plt.axis("equal")
 plt.savefig("Pct Total Rides by City Type.jpeg")
 ​
 # Show Figure
+## Note I couldn't match the exact angle of the pir chart but spoke with Max and said that wouldn't be an issue.
 plt.show()
 ​
 
-# Show Figure
-plt.show()
-
 Total Drivers by City Type
-driver_count
 # Calculate Driver Percents
 city_drivers = city_data_df.groupby('type')
 total_drivers = city_drivers['driver_count'].sum()
@@ -248,9 +236,6 @@ plt.axis("equal")
 plt.savefig("Pct Total Drivers by City Type.jpeg")
 ​
 # Show Figure
+## Note I couldn't match the exact angle of the pir chart but spoke with Max and said that wouldn't be an issue.
 plt.show()
 
-# Show Figure
-plt.show()
-
-​
